@@ -12,7 +12,7 @@ import java.time.format.DateTimeFormatter;
 @Configuration
 public class LocalDateTimeConfig {
 
-    /* boya
+    /*
      * 序列化内容
      *   LocalDateTime -> String
      * 服务端返回给客户端内容
