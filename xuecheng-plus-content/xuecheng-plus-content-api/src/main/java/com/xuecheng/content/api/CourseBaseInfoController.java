@@ -2,6 +2,8 @@ package com.xuecheng.content.api;
 
 import com.xuecheng.base.model.PageParams;
 import com.xuecheng.base.model.PageResult;
+import com.xuecheng.content.model.dto.AddCourseDto;
+import com.xuecheng.content.model.dto.CourseBaseInfoDto;
 import com.xuecheng.content.model.dto.QueryCourseParamsDto;
 import com.xuecheng.content.model.po.CourseBase;
 import com.xuecheng.content.service.CourseBaseService;
@@ -43,4 +45,16 @@ public class CourseBaseInfoController {
         return pageResult;
 
     }
+
+    /**
+     * 新增课程
+     * @param addCourseDto
+     * @return
+     */
+    @ApiOperation("添加课程接口")
+    @PostMapping("/course")
+    public CourseBaseInfoDto createCourseBase(@RequestBody AddCourseDto addCourseDto){
+        return courseBaseService.createCourseBase(1l,addCourseDto);
+    }
+
 }
