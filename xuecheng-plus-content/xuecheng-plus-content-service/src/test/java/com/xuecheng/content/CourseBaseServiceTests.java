@@ -3,6 +3,7 @@ package com.xuecheng.content;
 
 import com.xuecheng.base.model.PageParams;
 import com.xuecheng.base.model.PageResult;
+import com.xuecheng.content.model.dto.CourseBaseInfoDto;
 import com.xuecheng.content.model.dto.QueryCourseParamsDto;
 import com.xuecheng.content.model.po.CourseBase;
 import com.xuecheng.content.service.CourseBaseService;
@@ -18,7 +19,7 @@ public class CourseBaseServiceTests {
 
 
     @Autowired
-    CourseBaseService courseBaseService;
+    CourseBaseServiceImpl courseBaseService;
 
 
     @Test
@@ -36,4 +37,11 @@ public class CourseBaseServiceTests {
         System.out.println(pageResult);
 
     }
+
+    @Test
+    public void testgetCourseBaseInfo(){
+        CourseBaseInfoDto courseBaseInfoDto = courseBaseService.getCourseBaseInfo(136l);
+        System.out.println(courseBaseInfoDto);
+    }
+
 }
