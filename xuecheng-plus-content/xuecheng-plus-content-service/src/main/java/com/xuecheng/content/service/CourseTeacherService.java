@@ -3,6 +3,8 @@ package com.xuecheng.content.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.xuecheng.content.model.po.CourseTeacher;
 
+import java.util.List;
+
 /**
  * <p>
  * 课程-教师关系表 服务类
@@ -18,14 +20,14 @@ public interface CourseTeacherService extends IService<CourseTeacher> {
      * @param courseId
      * @return
      */
-    public CourseTeacher queryTeacher(Long courseId);
+    public List<CourseTeacher> queryTeacher(Long courseId);
 
     /**
      * 添加教师
      * @param courseTeacher
      * @return
      */
-    public CourseTeacher addTeacher(CourseTeacher courseTeacher);
+    public CourseTeacher saveTeacher(CourseTeacher courseTeacher);
 
 
     /**
